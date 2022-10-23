@@ -46,6 +46,8 @@
 			android:layout_height="wrap_content"
 			android:layout_margin="8dp"
 			android:layout_width="match_parent"
-			android:text="Kliknij mnie" />
+			android:onClick="@{() -> vm.onToggleClick()}"
+			android:text="Kliknij mnie"
+			android:textAllCaps="false" />
 	</LinearLayout>
 </layout>

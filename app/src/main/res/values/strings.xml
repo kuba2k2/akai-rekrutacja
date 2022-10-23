@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Rekrutacja</string>
+	<string name="error_image_hidden">Obrazek jest już ukryty</string>
+	<string name="error_image_shown">Obrazek jest już widoczny</string>
 </resources>

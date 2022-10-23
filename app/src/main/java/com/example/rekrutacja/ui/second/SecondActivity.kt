@@ -1,6 +1,7 @@
 package com.example.rekrutacja.ui.second
 
 import android.os.Bundle
+import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.get
 import com.example.rekrutacja.databinding.SecondActivityBinding
@@ -17,5 +18,9 @@ class SecondActivity : BindingActivity<SecondActivityBinding>(SecondActivityBind
         super.onCreate(savedInstanceState)
         vm = ViewModelProvider(this).get()
         b.vm = vm
+
+        vm.errorText.observe(this) {
+            Toast.makeText(this, getString(it ?: return@observe), Toast.LENGTH_SHORT).show()
+        }
     }
 }

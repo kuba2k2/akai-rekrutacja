@@ -1,7 +1,9 @@
 package com.example.rekrutacja.ui.second
 
 import androidx.databinding.ObservableField
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.example.rekrutacja.R
 
 class SecondViewModel : ViewModel() {
 	companion object {
@@ -9,6 +11,7 @@ class SecondViewModel : ViewModel() {
 	}
 
 	var imageVisible = ObservableField(true)
+	val errorText = MutableLiveData<Int?>(null)
 
 	/* 3.   Poniżej znajduje się kod, który obsługuje kliknięcia dwóch przycisków,
             jednak na wyświetlającym się widoku nie są one podpisane. Twoim
@@ -19,14 +22,26 @@ class SecondViewModel : ViewModel() {
             Podpisanie - chodzi o android:text.
      */
 	fun onFirstClick() {
+		if (imageVisible.get() == false) {
+			errorText.postValue(R.string.error_image_hidden)
+			return
+		}
 		imageVisible.set(false)
 	}
 
 	fun onSecondClick() {
+		if (imageVisible.get() == true) {
+			errorText.postValue(R.string.error_image_shown)
+			return
+		}
 		imageVisible.set(true)
 	}
 
-	/*4. TODO W tym activity znajduje się jeszcze jeden przycisk niestety kliknięcie
+	fun onToggleClick() {
+		imageVisible.set(imageVisible.get() != true) // get() is nullable
+	}
+
+	/* 4.   W tym activity znajduje się jeszcze jeden przycisk niestety kliknięcie
             na niego nic nie robi. Twoim zadaniem jest implementacja kliknięcia w taki sposób,
             aby jak obrazek jest widoczy przycisk chował obrazek, w przeciwnym wypadku,
             gdy obrazek jest schowany po kliknięciu obrazek ma się pojawić. Dodatkowo należy
