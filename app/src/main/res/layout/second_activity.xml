@@ -19,11 +19,10 @@
 
 		<ImageView
 			android:id="@+id/image"
-			android:background="@drawable/ic_launcher_background"
 			android:isVisible="@{vm.imageVisible}"
 			android:layout_height="100dp"
 			android:layout_width="100dp"
-			android:src="@drawable/ic_launcher_foreground" />
+			android:src="@mipmap/ic_launcher" />
 
 		<Button
 			android:id="@+id/firstButton"

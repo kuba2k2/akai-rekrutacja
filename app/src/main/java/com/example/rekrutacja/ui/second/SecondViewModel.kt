@@ -61,7 +61,7 @@ class SecondViewModel : ViewModel() {
 
 	 */
 
-	/* TODO Zadanie Dodatkowe. Tutaj masz zupełną dowolność, jeśli masz jeszcze czas
+	/*      Zadanie Dodatkowe. Tutaj masz zupełną dowolność, jeśli masz jeszcze czas
 			i ochotę zrób coś kreatywnego, ale jednocześnie prostego,
 			pamiętaj jednak, aby nie naruszyć tym kodu,
 			który realizuje poprzednich zadań. Nie jest to zadanie obowiązkowe.
