@@ -27,7 +27,7 @@ class MainViewModel : ViewModel() {
 		}
 	}
 
-	/*2.b TODO Druga część tego zadania polega na implementacji metody, która zmienia
+	/* 2.b  Druga część tego zadania polega na implementacji metody, która zmienia
             wszyskie literzy we wpisanym przez użytkownika tekscie na wielkie i
             wstawienie przerobionego tekstu do textView. Nie zapomnij dodać do metody
             OnCreate() OnClickListenera słuchającego na kliknięcia wstawionego przez Ciebie
@@ -35,6 +35,6 @@ class MainViewModel : ViewModel() {
             Kolejne zadanie czeka na Ciebie w pliku SecondActivity
      */
 	fun onClickMeClick() {
-
+		textViewText.set(inputText.uppercase())
 	}
 }
