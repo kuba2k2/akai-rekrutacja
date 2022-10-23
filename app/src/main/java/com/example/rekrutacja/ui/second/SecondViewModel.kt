@@ -54,7 +54,7 @@ class SecondViewModel : ViewModel() {
             Kolejne zadanie znajduje się poniżej.
      */
 
-	/*5. TODO Ostatnie zadanie polega na dodaniu przycisku pozwalającego na przejście spowrotem
+	/* 5.   Ostatnie zadanie polega na dodaniu przycisku pozwalającego na przejście spowrotem
 			do MainActivity. Tutaj jednak nie chcemy, abyś otwierał nowe activity, tylko po
 			kliknięcku przycisku zamknął aktualne, ponieważ pod aktualnie wyświetlanym activity
 			jest już instancja MainActivity.

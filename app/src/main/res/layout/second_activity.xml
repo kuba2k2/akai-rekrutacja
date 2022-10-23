@@ -49,5 +49,13 @@
 			android:onClick="@{() -> vm.onToggleClick()}"
 			android:text="Kliknij mnie"
 			android:textAllCaps="false" />
+
+		<Button
+			android:id="@+id/backButton"
+			android:layout_height="wrap_content"
+			android:layout_margin="8dp"
+			android:layout_width="match_parent"
+			android:text="Wróć"
+			android:textAllCaps="false" />
 	</LinearLayout>
 </layout>
