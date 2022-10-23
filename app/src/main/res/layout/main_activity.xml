@@ -1,39 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:gravity="center"
-    android:orientation="vertical"
-    tools:context=".ui.main.MainActivity">
+<layout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools">
 
+	<data>
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:text="@string/app_name"
-        android:textAlignment="center" />
+		<variable
+			name="vm"
+			type="com.example.rekrutacja.ui.main.MainViewModel" />
+	</data>
 
-    <EditText
-        android:id="@+id/editText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp" />
+	<LinearLayout
+		android:gravity="center"
+		android:layout_height="match_parent"
+		android:layout_width="match_parent"
+		android:orientation="vertical"
+		tools:context=".ui.main.MainActivity">
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:text="Przycisk" />
+		<TextView
+			android:layout_height="wrap_content"
+			android:layout_margin="8dp"
+			android:layout_width="match_parent"
+			android:text="@{vm.textViewText ?? @string/app_name}"
+			android:textAlignment="center" />
 
-    <!--2.a TODO Kolejnym zadaniem jest wstawienie nowego przycisku
-                do tego widoku. Przycisk należy wstawić tak, aby
-                wyświetlał się pomiędzy EditTextem, a przyciskiem o id 'button',
-                Dodatkowo na przycisku ma wyświetlać się napis 'Kliknij mnie'.
-                Kolejny podpunkt znajdziesz w pliku MainActivity.kt-->
+		<EditText
+			android:layout_height="wrap_content"
+			android:layout_margin="8dp"
+			android:layout_width="match_parent"
+			android:text="@={vm.inputText}" />
 
+		<Button
+			android:id="@+id/button"
+			android:layout_height="wrap_content"
+			android:layout_margin="8dp"
+			android:layout_width="match_parent"
+			android:onClick="@{() -> vm.onButtonClick()}"
+			android:text="Przycisk" />
 
-</LinearLayout>
+		<!--2.a TODO Kolejnym zadaniem jest wstawienie nowego przycisku
+					do tego widoku. Przycisk należy wstawić tak, aby
+					wyświetlał się pomiędzy EditTextem, a przyciskiem o id 'button',
+					Dodatkowo na przycisku ma wyświetlać się napis 'Kliknij mnie'.
+					Kolejny podpunkt znajdziesz w pliku MainActivity.kt-->
+	</LinearLayout>
+</layout>
