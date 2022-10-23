@@ -1,22 +1,18 @@
-package com.example.rekrutacja
-
+package com.example.rekrutacja.ui.main
 
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
-import com.example.rekrutacja.databinding.ActivityMainBinding
+import com.example.rekrutacja.databinding.MainActivityBinding
+import com.example.rekrutacja.onClick
+import com.example.rekrutacja.ui.base.BindingActivity
 
-class MainActivity : AppCompatActivity() {
-    lateinit var binding: ActivityMainBinding
+class MainActivity : BindingActivity<MainActivityBinding>(MainActivityBinding::inflate) {
+    companion object {
+        private const val TAG = "MainActivity"
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
-
-        binding.button.setOnClickListener {
-            onButtonClick()
-
-        }
+        b.button.onClick(this::onButtonClick)
     }
 
     /*1.TODO Pierwszym z zadań jest implementacja metody, w taki sposób, aby
@@ -27,7 +23,7 @@ class MainActivity : AppCompatActivity() {
             Podpowiedź poczytaj o Intent.
      */
     private fun onButtonClick() {
-        binding.textView.text = binding.editText.text.toString()
+        b.textView.text = b.editText.text.toString()
     }
 
     /*2.b TODO Druga część tego zadania polega na implementacji metody, która zmienia

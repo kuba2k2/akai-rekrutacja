@@ -1,17 +1,17 @@
-package com.example.rekrutacja
+package com.example.rekrutacja.ui.second
 
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
-import com.example.rekrutacja.databinding.ActivitySecondBinding
+import com.example.rekrutacja.databinding.SecondActivityBinding
+import com.example.rekrutacja.ui.base.BindingActivity
 
-class SecondActivity : AppCompatActivity() {
-    lateinit var binding: ActivitySecondBinding
+class SecondActivity : BindingActivity<SecondActivityBinding>(SecondActivityBinding::inflate) {
+    companion object {
+        private const val TAG = "SecondActivity"
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivitySecondBinding.inflate(layoutInflater)
-        setContentView(binding.root)
         /*3. TODO Poniżej znajduje się kod, który obsługuje kliknięcia dwóch przycisków,
                 jednak na wyświetlającym się widoku nie są one podpisane. Twoim
                 zadaniem jest wywnioskowanie co kliknięcie na poszczególny przycisk zmienia
@@ -21,7 +21,7 @@ class SecondActivity : AppCompatActivity() {
                 Podpisanie - chodzi o android:text.
          */
 
-        binding.apply {
+        b.apply {
             firstButton.setOnClickListener {
                 image.isVisible = false
             }
