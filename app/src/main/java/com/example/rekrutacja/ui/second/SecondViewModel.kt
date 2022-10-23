@@ -10,7 +10,7 @@ class SecondViewModel : ViewModel() {
 
 	var imageVisible = ObservableField(true)
 
-	/*3. TODO Poniżej znajduje się kod, który obsługuje kliknięcia dwóch przycisków,
+	/* 3.   Poniżej znajduje się kod, który obsługuje kliknięcia dwóch przycisków,
             jednak na wyświetlającym się widoku nie są one podpisane. Twoim
             zadaniem jest wywnioskowanie co kliknięcie na poszczególny przycisk zmienia
             i adekwatne podpisanie tych przycisków w pliku activity_second.xml.
